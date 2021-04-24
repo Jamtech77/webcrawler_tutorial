@@ -20,4 +20,14 @@ search_box.send_keys(query)
 search_box.submit()
 
 sleep(3)
+
+height = 1000
+# Execute Javascript
+# driver.execute_script("window.scrollTo(x, y)")  
+while height < 10000:
+    driver.execute_script("window.scrollTo(0, {})".format(height))  
+    height += 100
+    sleep(1)
+
+sleep(2)
 driver.quit()
